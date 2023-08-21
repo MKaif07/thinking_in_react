@@ -2,11 +2,17 @@ import stock from "../data/stock";
 import ProductCategoryRow from "./ProductCategoryRow";
 import ProductRow from "./ProductRow";
 
-const ProductTable = () => {
+const ProductTable = ({ filterText, onFilterTextChange, inStockOnly, onStockOnlyChange }) => {
   const rows = [];
   let lastCategory = null;
 
   stock.forEach((product) => {
+    if (product.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1) {
+      return;
+    }
+    if (inStockOnly && !product.stocked) {
+      return;
+    }
     if (product.category !== lastCategory) {
       rows.push(
         <ProductCategoryRow
@@ -14,7 +20,6 @@ const ProductTable = () => {
           key={product.category}
         />
       );
-      // console.log(product, product.category);
     }
     rows.push(<ProductRow product={product} key={product.name} />);
     lastCategory = product.category;

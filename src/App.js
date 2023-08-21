@@ -1,11 +1,11 @@
 import "./App.css";
-import Table from "./components/Table";
+import FilterableProductTable from "./components/FilterableProductTable";
 
 function App() {
   return (
     <>
       <div className="App">Hello World</div>
-      <Table></Table>
+      <FilterableProductTable></FilterableProductTable>
     </>
   );
 }

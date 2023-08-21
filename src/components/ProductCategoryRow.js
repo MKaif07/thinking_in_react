@@ -1,8 +1,8 @@
 const ProductCategoryRow = ({ category }) => {
   return (
     <>
-      <tr style={{textAlign:'center'}}>
-        <td>{category}</td>
+      <tr style={{ textAlign: "center" }}>
+        <th colSpan="2">{category}</th>
       </tr>
     </>
   );
