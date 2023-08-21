@@ -1,15 +1,9 @@
-import ProductRow from "./ProductRow";
-
-const ProductCategoryRow = () => {
+const ProductCategoryRow = ({ category }) => {
   return (
     <>
-      <tr>
-        <h4>ProductCategoryRow</h4>
+      <tr style={{textAlign:'center'}}>
+        <td>{category}</td>
       </tr>
-      <tr>
-        <th>Fruits</th>
-      </tr>
-      <ProductRow></ProductRow>
     </>
   );
 };

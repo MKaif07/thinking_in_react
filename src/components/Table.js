@@ -1,14 +1,13 @@
-import SearchBar from "./SearchBar"
-import ProductTable from "./ProductTable"
+import SearchBar from "./SearchBar";
+import ProductTable from "./ProductTable";
 
 const Table = () => {
   return (
-    <>
-    <div>Table</div>
-    <SearchBar></SearchBar>
-    <ProductTable></ProductTable>
-    </>
-  )
-}
+    <div style={{padding:'20px'}}>
+      <SearchBar></SearchBar>
+      <ProductTable></ProductTable>
+    </div>
+  );
+};
 
-export default Table
+export default Table;

@@ -1,17 +1,18 @@
-const ProductRow = () => {
+const ProductRow = ({ product }) => {
+  const name = product.stocked ? (
+    product.name
+  ) : (
+    <span style={{ color: "red" }}>
+      <tr>
+        <td>{product.name}</td>
+      </tr>
+    </span>
+  );
   return (
     <>
       <tr>
-        <td>Item</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td>Item</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>Item</td>
-        <td>3</td>
+        <td>{name}</td>
+        <td>{product.price}</td>
       </tr>
     </>
   );
